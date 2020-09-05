@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="FindME is a perfect indoor Navigation System with the mission to ease the navigation in indoor environments.">
+    <link rel = "stylesheet" type = "text/css" href = "Vendors/CSS/normalize.css">
+    <link rel = "stylesheet" type = "text/css" href = "Vendors/CSS/Grid.css">
+    <link rel = "stylesheet" type = "text/css" href = "Vendors/CSS/ionicons.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "Resources/CSS/style4.css">
+    <link rel = "stylesheet" type = "text/css" href = "Resources/CSS/queries.css">
+    <link rel = "stylesheet" type = "text/css" href = "Vendors/CSS/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" type ="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="Resources/Favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Resources/Favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Resources/Favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Resources/Favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Resources/Favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Resources/Favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Resources/Favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Resources/Favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="Resources/Favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Resources/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="Resources/Favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Resources/Favicon/favicon-16x16.png">
+<link rel="manifest" href="Resources/Favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <title>FindME-The Map</title>
+    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="section-nav">
+                 <div class = "row">
+                     <a href="index.html">
+                    <img src = "Resources/IMG/Logo%20White.png" alt = "FindME logo" class = "logo">
+                    
+                    <img src = "Resources/IMG/Logo%20White.png" alt = "FindME logo" class = "logo-black">
+                        </a>
+                    <ul class = "main-nav js--main-nav">
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "sign.php">Sign UP</a></li>
+                        <li><a href = "login.php">LOGIN</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                    
+                </div>
+                    </div>
+            
+            </nav>
+                 
+        </header>
+        <section>
+            <div id="map" style="width: auto; height: 500px; border: 2px solid rgba(0, 0, 0, 0.52)"></div>
+            <script>
+              mapboxgl.accessToken = 'pk.eyJ1IjoicmotZ2F1cmF2IiwiYSI6ImNrNjd4OW9iMTA3MDYza291bnRqaWVtZ3MifQ.EcP1oL3plLcsfu1rIm-5cw';
+              var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11'
+              });
+            </script>
+            <script>
+	         mapboxgl.accessToken = 'pk.eyJ1IjoicmotZ2F1cmF2IiwiYSI6ImNrNjd4OW9iMTA3MDYza291bnRqaWVtZ3MifQ.EcP1oL3plLcsfu1rIm-5cw';
+             var map = new mapboxgl.Map({
+             container: 'map',
+             style: 'mapbox://styles/mapbox/streets-v11',
+             center: [78.9629, 20.5937], 
+             zoom: 3 
+             });
+                map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+</script>
+        </section>
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="Vendors/JS/jquery.waypoints.min.js"></script>
+        <script src="Resources/JS/script.js"></script>
+    
+    </body>
+    
+    
+</html>
