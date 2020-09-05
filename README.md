@@ -1,1 +1,2 @@
 # FindMe
+Find Me is an Indoor Navigation Web-App. Indoor navigation deals with navigation within buildings. A typical application is turn-by-turn navigation in an app (displaying directions on a digital map) used for train stations, airports, shopping centers and museums. This kind of application can also include many other useful services. This web-app will help out the users to find where to locate which store and show the shortest path to it.
